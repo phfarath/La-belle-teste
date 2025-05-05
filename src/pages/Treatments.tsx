@@ -6,57 +6,63 @@ import FaqAccordion from '../components/faq/FaqAccordion';
 const Treatments: React.FC = () => {
   const treatments = [
     {
-      id: "botox",
-      title: "Tratamento com Botox",
-      description: "Reduza linhas finas e rugas com nossos tratamentos precisos de Botox, administrados por dermatologistas certificados para uma aparência natural e renovada.",
+      id: "surgeries",
+      title: "Pequenas Cirurgias",
+      description: "Realizamos o diagnóstico e retirada de lesoes cutaneas no consultório e tambem em ambientes hospitalares quando necessario. Nevos (pintas), verrugas, lipomas, cistos epidermicos, xantelasmas sao algumas das lesoes que fazemos a remoção.",
       image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "fillers",
-      title: "Preenchedores Dérmicos",
-      description: "Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos.",
+      id: "ultrasound",
+      title: "Ultrassom Micro e Macro Focado",
+      description: "O ultrassom microfocado ganhou espaço no combate a flacidez e gordura na face e no corpo devido a sua versatilidade e eficacia. Praticamente indolor essa tecnologia permite sua realização sem precisar sem afastar do trabalho, academia ou lazer.",
       image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "peels",
-      title: "Peelings Químicos",
-      description: "Revele uma pele mais brilhante e suave com nossos peelings químicos personalizados que combatem hiperpigmentação, acne, linhas finas e textura irregular.",
+      id: "botox",
+      title: "Toxina Botulínica",
+      description: "A toxina botulínica amplamente utilizada para tratamento de rugas estaticas e dinâmicas na face e pescoço faz parte de nossas opções para rejuvenescimento. Também realizamos ela para tratamento de suor excessivo em regiao axilar e palmo plantar.",
       image: "https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "laser",
-      title: "Tratamentos a Laser",
-      description: "Trate múltiplos problemas de pele com nossas terapias avançadas a laser para pigmentação, lesões vasculares, remoção de pelos e rejuvenescimento da pele.",
+      id: "fillers",
+      title: "Preenchimento com ácido hialurônico",
+      description: "O preenchimento com ácido hialurônico é um procedimento versátil que pode ser usado para restaurar volume, suavizar linhas e rugas, e melhorar os contornos faciais.",
       image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "acne",
-      title: "Tratamento de Acne",
-      description: "Tratamentos abrangentes para acne combinando produtos de grau médico, procedimentos e orientações de estilo de vida para uma pele limpa e saudável.",
+      id: "biostimulants",
+      title: "Bioestimulantes Injetáveis", 
+      description: "Os bioestimulantes são substâncias que estimulam a produção natural de colágeno, melhorando a qualidade e textura da pele de forma gradual e natural.",
       image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-      id: "antiaging",
-      title: "Protocolos Antienvelhecimento",
-      description: "Planos de tratamento antienvelhecimento personalizados utilizando uma combinação de cuidados preventivos, tratamentos tópicos e procedimentos não invasivos.",
+      id: "lasers",
+      title: "Lasers",
+      description: "É uma tecnologia versátil , usada para tratar manchas da pele, da face, colo e mãos, tratar rosácea e telangiectasias da face, ainda gera estímulo de colágeno superficial da pele levando ao aumento do viço e brilho. As sessões são mensais e varia quanto a indicação e de acordo com cada paciente. Também pode ser usado para epilação dos pelos de qualquer parte do corpo e em todos os fototipos.",
       image: "https://images.pexels.com/photos/7446603/pexels-photo-7446603.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "pdo",
+      title: "Fios PDO",
+      description: "Os fios de PDO são produzidos com material biocombustível com o organismo, portanto, 100% absorvíveis. Faz sustentação da pele e tecidos de gordura, tendo um efeito lifting sem cirurgia. Minimamente invasivo, melhora a textura da pele, diminui a flacidez e promove o rejuvenescimento.",
+      image: "https://images.pexels.com/photos/7446622/pexels-photo-7446622.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "fat-drainers",
+      title: "Esvaziadores de Gordura",
+      description: "Também conhecido como emptiers, são enzimas, aplicadas por via subcutânea, usadas para auxiliar na redução de gordura localizada em pequenas áreas corporais, como gordura do 'sutiã', flancos, periumbical, bochechas e papadas. Sessões são mensais e o protocolo é personalizado, após avaliação completa e individual, considerando as queixas e objetivos de cada paciente.",
+      image: "https://images.pexels.com/photos/3865560/pexels-photo-3865560.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "hair-mesotherapy",
+      title: "Mesoterapia Capilar",
+      description: "É um procedimento onde aplicamos diretamente no couro cabeludo, substâncias estéreis de acordo com a necessidade de cada paciente, a fim de estimular os folículos a produzirem novos fios. Feito na mesma sessão, antes da aplicação, um capacete de LED, onde tem duração de 15 minutos, que é eficaz no tratamento da queda de cabelo e estimula a circulação sanguínea, o que melhora a absorção dos medicamentos. As sessões são quinzenais ou mensais.",
+      image: "https://images.pexels.com/photos/7446606/pexels-photo-7446606.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "microneedling",
       title: "Microagulhamento",
-      description: "Estimule a produção de colágeno e melhore a textura da pele com microagulhamento de grau médico, eficaz para cicatrizes, estrias e rejuvenescimento geral.",
-      image: "https://images.pexels.com/photos/7446622/pexels-photo-7446622.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      id: "phototherapy",
-      title: "Fototerapia",
-      description: "Terapia de luz direcionada para tratar condições inflamatórias da pele como psoríase, eczema e vitiligo de maneira suave e não invasiva.",
-      image: "https://images.pexels.com/photos/3865560/pexels-photo-3865560.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      id: "sclerotherapy",
-      title: "Escleroterapia",
-      description: "Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.",
+      description: "É um procedimento seguro, quando bem indicado e realizado. A melhora observada com o tratamento decorre da produção de pequenos orifícios na pele , o que estimula a produção de colágeno e a renovação celular.",
       image: "https://images.pexels.com/photos/7446606/pexels-photo-7446606.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];

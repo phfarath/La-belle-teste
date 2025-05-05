@@ -32,17 +32,17 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Botox Avançado",
+                title: "Botox",
                 description: "Reduza linhas finas e rugas com nossos tratamentos de Botox de precisão para uma aparência natural e renovada.",
                 image: "https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
-                title: "Peelings Químicos",
-                description: "Revele uma pele mais brilhante e suave com nossos peelings químicos personalizados que tratam diversas preocupações com a pele.",
+                title: "Preenchimento com Ácido Hialurônico",
+                description: "Restaure o volume e a firmeza da pele com nossos preenchimentos dérmicos de ácido hialurônico, proporcionando um aspecto jovem e saudável.",
                 image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600"
               },
               {
-                title: "Terapia a Laser",
+                title: "Lasers",
                 description: "Tratamentos avançados a laser para pigmentação, cicatrizes, remoção de pelos e rejuvenescimento da pele.",
                 image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
               }
