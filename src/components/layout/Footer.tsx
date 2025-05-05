@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
           <div>
             <Logo />
             <p className="mt-4 text-gray-600 dark:text-gray-300 text-sm">
-              La Belle Cutanée – Dermatologia Avançada e Cuidados Estéticos em São Paulo. 
+              La Belle Cutanee – Dermatologia Avançada e Cuidados Estéticos em São Paulo. 
               Combinando tecnologia de ponta com atendimento humanizado para a saúde da sua pele.
             </p>
             <div className="mt-4 flex space-x-4">
@@ -77,20 +77,20 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Contato</h3>
             <address className="not-italic">
               <p className="text-gray-600 dark:text-gray-300 mb-2">
-                Av. Paulista, 1000 - Bela Vista
+                Av. Prefeito Fábio Prado, 211, Jardim Vila Mariana, 4º Andar - Sala 47
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-2">
-                São Paulo - SP, 01310-000
+                São Paulo - SP, 04116-000
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-2">
-                +55 (11) 5555-5555
+                +55 (11) 91282-4050
               </p>
               <p className="text-gray-600 dark:text-gray-300">
                 <a 
-                  href="mailto:contact@labellecutanee.com" 
+                  href="mailto:labellecutanee@gmail.com" 
                   className="hover:text-primary-600 dark:hover:text-secondary-400 transition-colors"
                 >
-                  contact@labellecutanee.com
+                  labellecutanee@gmail.com
                 </a>
               </p>
             </address>

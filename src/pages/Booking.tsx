@@ -41,9 +41,8 @@ const Booking: React.FC = () => {
                   <div className="ml-3">
                     <h4 className="text-sm font-medium text-gray-900 dark:text-white">Horário da Clínica</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Segunda a Sexta: 9:00 - 19:00<br />
-                      Sábado: 9:00 - 14:00<br />
-                      Domingo: Fechado
+                      Segunda a Sexta: 8:00 - 18:00<br />
+                      Sábado e Domingo: Fechado<br />
                     </p>
                   </div>
                 </div>
@@ -83,12 +82,12 @@ const Booking: React.FC = () => {
                     <p className="text-sm text-gray-600 dark:text-gray-300">
                       Entre em contato com nossa equipe de agendamento:<br />
                       <a 
-                        href="mailto:appointments@labellecutanee.com" 
+                        href="mailto:labellecutanee@gmail.com" 
                         className="text-primary-600 dark:text-secondary-400 hover:underline"
                       >
-                        appointments@labellecutanee.com
+                        labellecutanee@gmail.com
                       </a><br />
-                      +55 (11) 5555-5555
+                      +55 (11) 91282-4050
                     </p>
                   </div>
                 </div>
@@ -106,6 +105,10 @@ const Booking: React.FC = () => {
                 <li>• Evite exposição ao sol antes de tratamentos a laser</li>
                 <li>• Traga seu cartão de plano de saúde, se aplicável</li>
               </ul>
+            </div>
+            
+            <div className="mt-5 text-xs text-gray-500 dark:text-gray-400 italic text-center">
+              Após o envio do formulário, nossa equipe entrará em contato o mais rápido possível para confirmar seu agendamento.
             </div>
           </div>
         </motion.div>
