@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../../contexts/ThemeContext';
+import { useAuth } from '../../contexts/AuthContext';
 import Logo from '../ui/Logo';
 
 interface HeaderProps {
@@ -13,6 +14,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
+  const { isLoggedIn } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,7 +23,6 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-
   const navLinks = [
     { to: '/', label: 'Início' },
     { to: '/treatments', label: 'Tratamentos' },
@@ -30,6 +31,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     // { to: '/blog', label: 'Blog' },
     { to: '/booking', label: 'Agendar Consulta' },
     { to: '/contact', label: 'Contato' },
+    { to: isLoggedIn ? '/profile' : '/signup', label: isLoggedIn ? 'Perfil' : 'Signup' },
   ];
 
   return (
