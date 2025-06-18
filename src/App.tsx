@@ -10,7 +10,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import { ThemeProvider } from './contexts/ThemeContext';
-import PromoAlert from './components/ui/PromoAlert';
+// import PromoAlert from './components/ui/PromoAlert';
 
 function App() {
   const [showPromo, setShowPromo] = useState(false);
@@ -28,12 +28,6 @@ function App() {
     <ThemeProvider>
       <Router>
         <Layout>
-          {showPromo && (
-            <PromoAlert 
-              message="Botox Promo until May 30 — 20% off your first session" 
-              onClose={() => setShowPromo(false)} 
-            />
-          )}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/team" element={<Team />} />
