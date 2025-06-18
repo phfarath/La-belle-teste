@@ -10,13 +10,6 @@ const Team: React.FC = () => {
       credentials: "CRM 123456 / RQE 78910",
       bio: "Dra. Roberta Pontes possui mais de 15 anos de experiência em dermatologia clínica, especializada em tratamento de acne e prevenção de câncer de pele. Concluiu sua residência no Hospital das Clínicas e é membro da Sociedade Brasileira de Dermatologia.",
       image: "/images/Roberta (28) (1).jpg"
-    },
-    {
-      name: "Fernanda Lima",
-      specialty: "Dermatologia Estética",
-      credentials: "CRM 567890 / RQE 11121",
-      bio: "Dra. Fernanda Lima é especializada em dermatologia estética avançada. Com uma abordagem gentil e treinamento especializado, ela proporciona cuidados compassivos para todos os tipos de pele, utilizando as mais modernas técnicas e tratamentos disponíveis.",
-      image: "/images/Fernanda (97) (1).jpg"
     }
   ];
 
@@ -28,7 +21,7 @@ const Team: React.FC = () => {
           subtitle="Nossas dermatologistas certificadas combinam anos de experiência com educação contínua para oferecer a você o mais alto padrão de atendimento." 
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {doctors.map((doctor, index) => (
             <DoctorCard
               key={index}

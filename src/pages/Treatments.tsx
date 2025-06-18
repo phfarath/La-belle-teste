@@ -8,62 +8,62 @@ const Treatments: React.FC = () => {
     {
       id: "pequenas-cirurgias",
       title: "Pequenas Cirurgias",
-      description: "Procedimentos minimamente invasivos para remoção de sinais, cistos, verrugas e outras lesões cutâneas, realizados com segurança e precisão.",
-      image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Reduza linhas finas e rugas com nossos tratamentos precisos de Botox, administrados por dermatologistas certificados para uma aparência natural e renovada.",
+      image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "ultrassom",
       title: "Ultrassom Micro e Macrofocado",
-      description: "Tecnologia avançada para lifting facial e corporal sem cortes, promovendo firmeza e redefinição dos contornos da pele.",
-      image: "https://images.pexels.com/photos/3738341/pexels-photo-3738341.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos.",
+      image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "botox",
       title: "Tratamento com Botox",
-      description: "Reduza rugas e linhas de expressão com aplicações seguras de toxina botulínica, proporcionando um aspecto natural e rejuvenescido.",
-      image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Revele uma pele mais brilhante e suave com nossos peelings químicos personalizados que combatem hiperpigmentação, acne, linhas finas e textura irregular.",
+      image: "https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "preenchimento",
       title: "Preenchimento com Ácido Hialurônico",
-      description: "Recupere o volume e redefina contornos faciais com preenchedores de ácido hialurônico, realçando sua beleza de forma harmônica.",
+      description: "Trate múltiplos problemas de pele com nossas terapias avançadas a laser para pigmentação, lesões vasculares, remoção de pelos e rejuvenescimento da pele.",
       image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "estimulantes",
       title: "Bioestimulantes de Colágeno",
-      description: "Estimule a produção natural de colágeno, melhorando a firmeza e a textura da pele de maneira progressiva e duradoura.",
-      image: "https://images.pexels.com/photos/415980/pexels-photo-415980.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Tratamentos abrangentes para acne combinando produtos de grau médico, procedimentos e orientações de estilo de vida para uma pele limpa e saudável.",
+      image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "lasers",
       title: "Tratamentos a Laser",
-      description: "Renove a pele, trate manchas, cicatrizes e linhas finas com sessões de laser, promovendo rejuvenescimento seguro e eficaz.",
-      image: "https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Planos de tratamento antienvelhecimento personalizados utilizando uma combinação de cuidados preventivos, tratamentos tópicos e procedimentos não invasivos.",
+      image: "https://images.pexels.com/photos/7446603/pexels-photo-7446603.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "fios-pdo",
       title: "Fios PDO",
-      description: "Promova efeito lifting imediato e estimule o colágeno com fios absorvíveis, melhorando a firmeza facial sem cirurgia.",
-      image: "https://images.pexels.com/photos/3993446/pexels-photo-3993446.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Estimule a produção de colágeno e melhore a textura da pele com microagulhamento de grau médico, eficaz para cicatrizes, estrias e rejuvenescimento geral.",
+      image: "https://images.pexels.com/photos/7446622/pexels-photo-7446622.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "esvaziadores",
       title: "Esvaziadores de Gordura",
-      description: "Reduza gordura localizada de forma não cirúrgica com aplicações de enzimas que promovem contorno corporal.",
-      image: "https://images.pexels.com/photos/5938361/pexels-photo-5938361.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Terapia de luz direcionada para tratar condições inflamatórias da pele como psoríase, eczema e vitiligo de maneira suave e não invasiva.",
+      image: "https://images.pexels.com/photos/3865560/pexels-photo-3865560.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "mesoterapia-capilar",
       title: "Mesoterapia Capilar",
-      description: "Tratamento injetável para fortalecimento dos fios, combate à queda e estímulo ao crescimento capilar.",
-      image: "https://images.pexels.com/photos/3993447/pexels-photo-3993447.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.",
+      image: "https://images.pexels.com/photos/7446606/pexels-photo-7446606.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
       id: "microagulhamento",
       title: "Microagulhamento",
-      description: "Estimule o colágeno e trate cicatrizes, poros dilatados e estrias com microagulhamento de alta precisão.",
-      image: "https://images.pexels.com/photos/5938360/pexels-photo-5938360.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.",
+      image: "https://images.pexels.com/photos/7446606/pexels-photo-7446606.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];
 
