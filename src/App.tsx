@@ -14,7 +14,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-// import PromoAlert from './components/ui/PromoAlert';
+//import PromoAlert from './components/ui/PromoAlert';
 
 function App() {
   const [showPromo, setShowPromo] = useState(false);

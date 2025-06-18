@@ -118,7 +118,7 @@ const Treatments: React.FC = () => {
               id={treatment.id}
               title={treatment.title}
               description={treatment.description}
-              image={treatment.image}
+              image={treatment.image || ''}
               index={index}
             />
           ))}
