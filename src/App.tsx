@@ -10,6 +10,10 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { AuthProvider } from './contexts/AuthContext';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Profile from './pages/Profile';
 // import PromoAlert from './components/ui/PromoAlert';
 
 function App() {
@@ -26,20 +30,25 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/team" element={<Team />} />
-            <Route path="/treatments" element={<Treatments />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-          <WhatsAppButton />
-        </Layout>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/treatments" element={<Treatments />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/booking" element={<Booking />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+            <WhatsAppButton />
+          </Layout>
+        </Router>
+      </AuthProvider>
     </ThemeProvider>
   );
 }
