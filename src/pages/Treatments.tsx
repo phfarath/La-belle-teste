@@ -14,8 +14,7 @@ const Treatments: React.FC = () => {
     {
       id: "ultrassom",
       title: "Ultrassom Micro e Macrofocado",
-      description: "Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos.",
-      image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
+      description: "Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos."
     },
     {
       id: "botox",
@@ -33,6 +32,17 @@ const Treatments: React.FC = () => {
       id: "estimulantes",
       title: "Bioestimulantes de Colágeno",
       description: "Tratamentos abrangentes para acne combinando produtos de grau médico, procedimentos e orientações de estilo de vida para uma pele limpa e saudável.",
+    },
+    {
+      id: "fillers",
+      title: "Preenchimento com ácido hialurônico",
+      description: "O preenchimento com ácido hialurônico é um procedimento versátil que pode ser usado para restaurar volume, suavizar linhas e rugas, e melhorar os contornos faciais.",
+      image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      id: "biostimulants",
+      title: "Bioestimulantes Injetáveis", 
+      description: "Os bioestimulantes são substâncias que estimulam a produção natural de colágeno, melhorando a qualidade e textura da pele de forma gradual e natural.",
       image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
@@ -63,7 +73,6 @@ const Treatments: React.FC = () => {
       id: "microagulhamento",
       title: "Microagulhamento",
       description: "Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.",
-      image: "https://images.pexels.com/photos/7446606/pexels-photo-7446606.jpeg?auto=compress&cs=tinysrgb&w=600"
     }
   ];
 
