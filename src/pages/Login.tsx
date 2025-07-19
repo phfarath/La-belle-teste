@@ -12,22 +12,23 @@ const Login: React.FC = () => {
   const { login } = useAuth();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
     setLoading(true);
-
-    console.log('Login: Iniciando processo de login...');
-    const result = await login(email, password);
-    console.log('Login: Resultado recebido:', result);
-
-    if (result.error) {
-      console.log('Login: Erro encontrado:', result.error);
-      setError(result.error);
-    } else {
-      console.log('Login: Sucesso! Navegando para perfil...');
-      navigate('/profile');
+    setError('');
+    
+    try {
+      // Simulação de autenticação
+      const users = JSON.parse(sessionStorage.getItem('users') || '[]');
+      const user = users.find((u: any) => u.email === email && u.password === password);
+      if (user) {
+        await login(email, password);
+        navigate('/profile');
+      } else {
+        setError('Email ou senha inválidos');
+      }
+    } catch (err) {
+      setError('Email ou senha inválidos');
     }
     setLoading(false);
-    console.log('Login: Processo finalizado');
   };
 
   return (

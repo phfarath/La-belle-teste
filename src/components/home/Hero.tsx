@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       {/* Imagem de Fundo com Sobreposição */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/Ambiente (18).jpg"
+          src="/images/ambiente/Ambiente (18).jpg"
           alt="Clínica La Belle Cutanee"
           className="h-full w-full object-cover object-center"
         />
