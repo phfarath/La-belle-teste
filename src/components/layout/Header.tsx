@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     // { to: '/blog', label: 'Blog' },
     { to: '/booking', label: 'Agendar Consulta' },
     { to: '/contact', label: 'Contato' },
-    { to: isLoggedIn ? '/profile' : '/signup', label: isLoggedIn ? 'Perfil' : 'Signup' },
+    { to: isLoggedIn ? '/profile' : '/signup', label: isLoggedIn ? 'Perfil' : 'Signup/Login' },
   ];
 
   return (

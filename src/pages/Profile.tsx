@@ -1,50 +1,92 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import { supabase } from '../lib/supabaseClient';
 import { motion } from 'framer-motion';
-import { User, Edit3, Save, LogOut, History, Lightbulb, Calendar, Stethoscope } from 'lucide-react';
+import { User, Edit3, Save, LogOut, History, Lightbulb, Calendar, Stethoscope, Loader2 } from 'lucide-react';
 
+// Interfaces alinhadas com o banco de dados
 interface Atendimento {
-  data: string;
-  descricao: string;
+  id: number;
+  record_date: string;
+  description: string;
+}
+
+interface Sugestao {
+  id: number;
+  suggestion_text: string;
 }
 
 const Profile: React.FC = () => {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  
   const [nome, setNome] = useState('');
   const [atendimentos, setAtendimentos] = useState<Atendimento[]>([]);
-  const [sugestoes, setSugestoes] = useState<string[]>([]);
-  const navigate = useNavigate();
-  const { user, logout, updateUser } = useAuth();
+  const [sugestoes, setSugestoes] = useState<Sugestao[]>([]);
+  const [loadingData, setLoadingData] = useState(true);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     if (!user) {
       navigate('/login');
       return;
     }
-    setNome(user.name);
-    setAtendimentos(user.atendimentos || []);
-    setSugestoes(user.sugestoes || []);
+    
+    setNome(user.full_name || '');
+
+    const fetchData = async () => {
+      setLoadingData(true);
+      try {
+        const { data: recordsData, error: recordsError } = await supabase
+          .from('patient_records')
+          .select('id, record_date, description')
+          .eq('patient_id', user.id)
+          .order('record_date', { ascending: false });
+        
+        if (recordsError) throw recordsError;
+        setAtendimentos(recordsData || []);
+
+        const { data: suggestionsData, error: suggestionsError } = await supabase
+          .from('suggestions')
+          .select('id, suggestion_text')
+          .eq('patient_id', user.id)
+          .order('created_at', { ascending: false });
+
+        if (suggestionsError) throw suggestionsError;
+        setSugestoes(suggestionsData || []);
+
+      } catch (error) {
+        console.error('Erro ao buscar dados do perfil:', error);
+      } finally {
+        setLoadingData(false);
+      }
+    };
+
+    fetchData();
   }, [user, navigate]);
 
-  const handleLogout = () => {
-    logout();
+  const handleLogout = async () => {
+    await logout();
     navigate('/login');
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!user) return;
-    const users = JSON.parse(sessionStorage.getItem('users') || '[]');
-    const userIndex = users.findIndex((u: any) => u.email === user.email);
+    setSaving(true);
+    try {
+      const { error } = await supabase
+        .from('profiles')
+        .update({ full_name: nome })
+        .eq('id', user.id);
 
-    if (userIndex !== -1) {
-      const updatedUser = {
-        ...users[userIndex],
-        name: nome,
-      };
-      users[userIndex] = updatedUser;
-      sessionStorage.setItem('users', JSON.stringify(users));
-      updateUser(updatedUser);
+      if (error) throw error;
       alert('Perfil atualizado com sucesso!');
+    } catch (error) {
+      console.error('Erro ao salvar perfil:', error);
+      alert('Não foi possível atualizar o perfil.');
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -106,7 +148,7 @@ const Profile: React.FC = () => {
                   <input
                     type="email"
                     id="email"
-                    value={user.email}
+                    value={user.email || ''}
                     disabled
                     className="w-full p-3 bg-gray-100 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-md text-gray-500 dark:text-gray-400 cursor-not-allowed"
                   />
@@ -117,10 +159,11 @@ const Profile: React.FC = () => {
             <div className="space-y-3">
               <button
                 onClick={handleSave}
-                className="w-full flex items-center justify-center py-3 px-6 bg-primary-600 hover:bg-primary-700 text-white rounded-md transition-colors font-medium"
+                disabled={saving}
+                className="w-full flex items-center justify-center py-3 px-6 bg-primary-600 hover:bg-primary-700 text-white rounded-md transition-colors font-medium disabled:opacity-50"
               >
-                <Save size={20} className="mr-2" />
-                Salvar Alterações
+                {saving ? <Loader2 className="animate-spin mr-2" /> : <Save size={20} className="mr-2" />}
+                {saving ? 'Salvando...' : 'Salvar Alterações'}
               </button>
               <button
                 onClick={handleLogout}
@@ -133,92 +176,76 @@ const Profile: React.FC = () => {
           </motion.div>
 
           <div className="lg:col-span-2 space-y-8">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <History size={24} className="text-primary-600 dark:text-secondary-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Histórico de Atendimentos</h3>
-                </div>
-                <span className="text-sm font-bold text-white bg-primary-600 dark:bg-secondary-400 rounded-full px-3 py-1">
-                  {atendimentos.length}
-                </span>
+            {loadingData ? (
+              <div className="flex justify-center items-center h-64">
+                <Loader2 size={32} className="animate-spin text-primary-600" />
               </div>
-
-              <div className="space-y-4 max-h-64 overflow-y-auto pr-2">
-                {atendimentos.length === 0 ? (
-                  <div className="text-center py-8 px-4 border-2 border-dashed rounded-lg">
-                    <Calendar size={32} className="mx-auto text-gray-400 mb-2" />
-                    <p className="text-gray-500 dark:text-gray-400">Nenhum atendimento registrado ainda.</p>
-                    <p className="text-sm mt-2">Seus registros aparecerão aqui após cada consulta.</p>
+            ) : (
+              <>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center">
+                      <History size={24} className="text-primary-600 dark:text-secondary-400 mr-3" />
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Histórico de Atendimentos</h3>
+                    </div>
+                    <span className="text-sm font-bold text-white bg-primary-600 dark:bg-secondary-400 rounded-full px-3 py-1">
+                      {atendimentos.length}
+                    </span>
                   </div>
-                ) : (
-                  atendimentos.map((a, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: i * 0.1 }}
-                      className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border-l-4 border-primary-600 dark:border-secondary-400"
-                    >
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="font-medium text-gray-900 dark:text-white">
-                            {a.descricao}
-                          </p>
-                          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                            {a.data}
-                          </p>
-                        </div>
+                  <div className="space-y-4 max-h-64 overflow-y-auto pr-2">
+                    {atendimentos.length === 0 ? (
+                      <div className="text-center py-8 px-4 border-2 border-dashed rounded-lg">
+                        <Calendar size={32} className="mx-auto text-gray-400 mb-2" />
+                        <p className="text-gray-500 dark:text-gray-400">Nenhum atendimento registrado ainda.</p>
                       </div>
-                    </motion.div>
-                  ))
-                )}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div className="flex items-center">
-                  <Lightbulb size={24} className="text-primary-600 dark:text-secondary-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Sugestões Personalizadas</h3>
-                </div>
-                <span className="text-sm font-bold text-white bg-primary-600 dark:bg-secondary-400 rounded-full px-3 py-1">
-                  {sugestoes.length}
-                </span>
-              </div>
-
-              <div className="space-y-3">
-                {sugestoes.length === 0 ? (
-                  <div className="text-center py-8 px-4 border-2 border-dashed rounded-lg">
-                    <Stethoscope size={32} className="mx-auto text-gray-400 mb-2" />
-                    <p className="text-gray-500 dark:text-gray-400">Nenhuma sugestão disponível.</p>
-                    <p className="text-sm mt-2">Nossas recomendações aparecerão aqui conforme seus atendimentos.</p>
+                    ) : (
+                      atendimentos.map((a) => (
+                        <motion.div key={a.id} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border-l-4 border-primary-600 dark:border-secondary-400">
+                          <p className="font-medium text-gray-900 dark:text-white">{a.description}</p>
+                          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{new Date(a.record_date).toLocaleDateString()}</p>
+                        </motion.div>
+                      ))
+                    )}
                   </div>
-                ) : (
-                  sugestoes.map((s, i) => (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: i * 0.1 }}
-                      className="p-4 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-lg border border-primary-200 dark:border-primary-700"
-                    >
-                      <p className="text-gray-900 dark:text-white">{s}</p>
-                    </motion.div>
-                  ))
-                )}
-              </div>
-            </motion.div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center">
+                      <Lightbulb size={24} className="text-primary-600 dark:text-secondary-400 mr-3" />
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Sugestões Personalizadas</h3>
+                    </div>
+                    <span className="text-sm font-bold text-white bg-primary-600 dark:bg-secondary-400 rounded-full px-3 py-1">
+                      {sugestoes.length}
+                    </span>
+                  </div>
+                  <div className="space-y-3">
+                    {sugestoes.length === 0 ? (
+                      <div className="text-center py-8 px-4 border-2 border-dashed rounded-lg">
+                        <Stethoscope size={32} className="mx-auto text-gray-400 mb-2" />
+                        <p className="text-gray-500 dark:text-gray-400">Nenhuma sugestão disponível.</p>
+                      </div>
+                    ) : (
+                      sugestoes.map((s) => (
+                        <motion.div key={s.id} className="p-4 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/30 dark:to-secondary-900/30 rounded-lg border border-primary-200 dark:border-primary-700">
+                          <p className="text-gray-900 dark:text-white">{s.suggestion_text}</p>
+                        </motion.div>
+                      ))
+                    )}
+                  </div>
+                </motion.div>
+              </>
+            )}
           </div>
         </div>
       </div>
