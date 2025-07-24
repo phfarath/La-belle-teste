@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../../contexts/ThemeContext';
-import { useAuth } from '../../contexts/AuthContext';
+// import { useAuth } from '../../contexts/AuthContext';
 import Logo from '../ui/Logo';
 
 interface HeaderProps {
@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
-  const { isLoggedIn } = useAuth();
+  // const { isLoggedIn } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -29,9 +29,9 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     { to: '/team', label: 'Nossa Equipe' },
     { to: '/gallery', label: 'Galeria da Clínica' },
     // { to: '/blog', label: 'Blog' },
-    { to: '/booking', label: 'Agendar Consulta' },
+    // { to: '/booking', label: 'Agendar Consulta' },
     { to: '/contact', label: 'Contato' },
-    { to: isLoggedIn ? '/profile' : '/signup', label: isLoggedIn ? 'Perfil' : 'Signup/Login' },
+    //{ to: isLoggedIn ? '/profile' : '/signup', label: isLoggedIn ? 'Perfil' : 'Signup/Login' },
   ];
 
   return (

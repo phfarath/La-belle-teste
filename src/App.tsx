@@ -7,17 +7,17 @@ import Treatments from './pages/Treatments';
 import Gallery from './pages/Gallery';
 import Booking from './pages/Booking';
 import Contact from './pages/Contact';
-import Blog from './pages/Blog';
+// import Blog from './pages/Blog';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import Profile from './pages/Profile';
-import PromoAlert from './components/ui/PromoAlert';
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
+// import Profile from './pages/Profile';
+// import PromoAlert from './components/ui/PromoAlert';
 
 function App() {
-  const [showPromo, setShowPromo] = useState(false);
+  const [_showPromo, setShowPromo] = useState(false);
 
   useEffect(() => {
     // Show promo after 3 seconds
@@ -40,10 +40,10 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/booking" element={<Booking />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/blog" element={<Blog />} />
+              {/* <Route path="/blog" element={<Blog />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route path="/profile" element={<Profile />} /> */}
             </Routes>
             <WhatsAppButton />
           </Layout>
