@@ -6,75 +6,75 @@ const Gallery: React.FC = () => {
   const clinicImages = [
     {
       id: 1,
-      src: "https://images.pexels.com/photos/140945/pexels-photo-140945.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "La Belle Cutanée Reception Area",
-      category: "reception"
+      src: "public/images/ambiente/Ambiente (22).jpg",
+      alt: "La Belle Cutanée recepção Area",
+      category: "recepção"
     },
     {
       id: 2,
-      src: "https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Modern Treatment Room",
-      category: "treatment"
+      src: "public/images/ambiente/Ambiente (30).jpg",
+      alt: "Modern treatment Room",
+      category: "salas"
     },
     {
       id: 3,
-      src: "https://images.pexels.com/photos/3994840/pexels-photo-3994840.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Consultation Office",
-      category: "consultation"
+      src: "public/images/ambiente/Ambiente (31).jpg",
+      alt: "consultas Office",
+      category: "salas"
     },
     {
       id: 4,
-      src: "https://images.pexels.com/photos/8472874/pexels-photo-8472874.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/Ambiente (45).jpg",
       alt: "Premium Skincare Products Display",
-      category: "products"
+      category: "salas"
     },
     {
       id: 5,
-      src: "https://images.pexels.com/photos/2678468/pexels-photo-2678468.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/foto-consultorio.jpg",
       alt: "Waiting Lounge",
-      category: "reception"
+      category: "recepção"
     },
     {
       id: 6,
-      src: "https://images.pexels.com/photos/5699514/pexels-photo-5699514.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Laser Treatment Room",
-      category: "treatment"
+      src: "public/images/ambiente/Lasers.jpg",
+      alt: "Laser salas Room",
+      category: "consultas"
     },
     {
       id: 7,
-      src: "https://images.pexels.com/photos/4021766/pexels-photo-4021766.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/Mesoterapia-Capilar.jpg",
       alt: "Clinic Building Exterior",
-      category: "exterior"
+      category: "consultas"
     },
     {
       id: 8,
-      src: "https://images.pexels.com/photos/12794525/pexels-photo-12794525.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/Ambiente (18).jpg",
       alt: "Relaxation Area",
-      category: "reception"
+      category: "recepção"
     },
     {
       id: 9,
-      src: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600",
-      alt: "Facial Treatment Room",
-      category: "treatment"
+      src: "public/images/ambiente/Ambiente (52).jpg",
+      alt: "Facial salas Room",
+      category: "salas"
     },
     {
       id: 10,
-      src: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/Esvasiadores.jpg",
       alt: "Product Testing Area",
-      category: "products"
+      category: "consultas"
     },
     {
       id: 11,
-      src: "https://images.pexels.com/photos/8460118/pexels-photo-8460118.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/pequenas-cirurgias.jpg",
       alt: "Modern Vanity Area",
-      category: "reception"
+      category: "consultas"
     },
     {
       id: 12,
-      src: "https://images.pexels.com/photos/4210311/pexels-photo-4210311.jpeg?auto=compress&cs=tinysrgb&w=600",
+      src: "public/images/ambiente/Ambiente (8).jpg",
       alt: "Advanced Equipment",
-      category: "equipment"
+      category: "recepção"
     }
   ];
 
