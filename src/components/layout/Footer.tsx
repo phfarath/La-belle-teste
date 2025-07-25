@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import Logo from '../ui/Logo';
 
 const Footer: React.FC = () => {
@@ -17,14 +17,8 @@ const Footer: React.FC = () => {
               Combinando tecnologia de ponta com atendimento humanizado para a saúde da sua pele.
             </p>
             <div className="mt-4 flex space-x-4">
-              <a href="https://instagram.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-secondary-400 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/labelle_cutanee/" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-secondary-400 transition-colors" aria-label="Instagram">
                 <Instagram size={20} />
-              </a>
-              <a href="https://facebook.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-secondary-400 transition-colors" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="https://twitter.com" className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-secondary-400 transition-colors" aria-label="Twitter">
-                <Twitter size={20} />
               </a>
             </div>
           </div>
@@ -37,7 +31,7 @@ const Footer: React.FC = () => {
                 { to: '/treatments', label: 'Tratamentos' },
                 { to: '/team', label: 'Nossa Equipe' },
                 { to: '/gallery', label: 'Galeria da Clínica' },
-                { to: '/blog', label: 'Blog' },
+                // { to: '/blog', label: 'Blog' },
               ].map((link) => (
                 <li key={link.to}>
                   <Link 

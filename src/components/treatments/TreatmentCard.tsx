@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 interface TreatmentCardProps {
   id: string;
@@ -10,7 +10,7 @@ interface TreatmentCardProps {
   index: number;
 }
 
-const TreatmentCard: React.FC<TreatmentCardProps> = ({ id, title, description, image, index }) => {
+const TreatmentCard: React.FC<TreatmentCardProps> = ({ title, description, image, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -29,12 +29,12 @@ const TreatmentCard: React.FC<TreatmentCardProps> = ({ id, title, description, i
       <div className="p-6">
         <h3 className="text-xl font-playfair font-semibold mb-3 text-gray-900 dark:text-white">{title}</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{description}</p>
-        <Link
+        {/* <Link
           to={`/treatments/${id}`}
           className="inline-block py-2 px-4 bg-primary-600 hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-800 text-white rounded-md transition-colors font-medium text-sm"
         >
           Saiba Mais
-        </Link>
+        </Link> */}
       </div>
     </motion.div>
   );

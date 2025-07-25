@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
           
           <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
-              to="/booking"
+              to="/contact"
               className="btn-primary text-center"
             >
               Agendar Consulta

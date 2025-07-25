@@ -104,12 +104,12 @@ const Gallery: React.FC = () => {
             >
               Entre em Contato
             </a>
-            <a
+            {/* <a
               href="/booking"
               className="py-2 px-6 bg-gray-200 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-md transition-colors font-medium"
             >
               Marcar Consulta
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

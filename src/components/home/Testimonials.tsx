@@ -13,24 +13,24 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Ana Oliveira",
-    role: "Paciente desde 2022",
-    quote: "Minha experiência na La Belle Cutanée foi excepcional. A equipe é incrivelmente atenciosa, e o Dr. Pontes transformou minha pele. Depois de anos lutando contra a acne, finalmente tenho uma pele limpa e saudável graças ao plano de tratamento personalizado deles.",
-    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=300"
+    name: "Rodrigo Farath",
+    role: "Paciente desde 2015",
+    quote: "Minha experiência na La Belle Cutanée foi excepcional. A equipe é incrivelmente atenciosa, e o Dra. Roberta Pontes transformou minha pele. Depois de anos lutando contra a acne, finalmente tenho uma pele limpa e saudável graças ao plano de tratamento deles.",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXECJ3zJ4gqIK7t0xglkpB1JXu6KMfpGPmrSWupAQkpxGPrsmVZ=w72-h72-p-rp-mo-ba4-br100"
   },
   {
     id: 2,
-    name: "Carlos Silva",
-    role: "Paciente desde 2021",
-    quote: "O tratamento a laser que recebi para danos causados pelo sol superou minhas expectativas. Os resultados foram visíveis após apenas duas sessões, e toda a equipe me fez sentir confortável durante o processo. Altamente recomendado para quem procura cuidados dermatológicos de qualidade.",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=300"
+    name: "Vanessa Vilaça",
+    role: "Paciente desde 2015",
+    quote: "Com a Dra. Roberta, a beleza é tratada com cuidado e confiança! Cada detalhe, é pensado, tanto na questão de cuidado com a pele, quanto na questao estética, sem abusos e/ou exageros, sempre o bom senso do natural e bonita e principalmente sem riscos. Dermatologia de excelência, onde cada detalhe e tratamento é pensado para realçar o melhor de você. Amo cada visita em sua clínica.",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXjYl9zMMMiZfmTFAY1HYGSRdAAIJ1p1LhWSBzzOltWAMFW3y9w=w72-h72-p-rp-mo-ba2-br100"
   },
   {
     id: 3,
-    name: "Gabriela Santos",
+    name: "Adriana Akemi Kuniy",
     role: "Paciente desde 2023",
-    quote: "Eu estava nervosa para fazer Botox pela primeira vez, mas os médicos da La Belle Cutanée me deixaram à vontade com sua experiência e profissionalismo. Os resultados parecem tão naturais que meus amigos percebem que estou renovada, mas não conseguem dizer que fiz algum procedimento.",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300"
+    quote: "Clínica bem localizada e atendimento incrível! A dra Roberta Farah é uma excelente profissional. Dermatologista super competente. Ela recomenda o ideal para o paciente, não fica empurrando procedimentos. Super coerente com o biotipo da pessoa. Super recomendo !!!",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjUm6MZd0ihQpCRerhZnd2BbPyvdbWggEjH1ctaeVVXGoD4mdNUhFQ=w72-h72-p-rp-mo-ba3-br100"
   }
 ];
 
