@@ -145,13 +145,13 @@ const TreatmentRecommender: React.FC = () => {
                   </p>
                   <div className="flex space-x-4">
                     <Link
-                      to="#"
+                      to="/treatments"
                       className="inline-block py-2 px-6 bg-primary-600 hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-800 text-white rounded-md transition-colors font-medium"
                     >
                       Saiba Mais
                     </Link>
                     <Link
-                      to="/booking"
+                      to="/contact"
                       className="inline-block py-2 px-6 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-md transition-colors font-medium"
                     >
                       Agendar Consulta
