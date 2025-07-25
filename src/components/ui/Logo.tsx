@@ -2,13 +2,18 @@ import React from 'react';
 import { useTheme } from '../../contexts/ThemeContext';
 
 const Logo: React.FC = () => {
-  useTheme();
+  const { theme } = useTheme();
   
+  // Define qual logo usar com base no tema
+  const logoSrc = theme === 'light' 
+    ? "/images/Ativo 14.png"  // Logo para o tema claro
+    : "/images/01 (1).png";   // Logo para o tema escuro
+
   return (
     <div className="flex items-center">
       <div>
       <img 
-        src="/images/01 (1).png" 
+        src={logoSrc} 
         alt="La Belle Cutanee Logo" 
         className="h-12 mr-2"
       />
