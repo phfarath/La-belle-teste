@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                   href="mailto:labellecutanee@gmail.com" 
                   className="hover:text-primary-600 dark:hover:text-secondary-400 transition-colors"
                 >
-                  labellecutanee@gmail.com
+                  roberta_pontes@labellecutanee.com.br
                 </a>
               </p>
             </address>
