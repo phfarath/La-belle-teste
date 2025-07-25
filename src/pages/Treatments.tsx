@@ -9,70 +9,67 @@ const Treatments: React.FC = () => {
       id: "pequenas-cirurgias",
       title: "Pequenas Cirurgias",
       description: "Reduza linhas finas e rugas com nossos tratamentos precisos de Botox, administrados por dermatologistas certificados para uma aparência natural e renovada.",
-      image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/Pequenas-cirurgias.png"
     },
     {
       id: "ultrassom",
       title: "Ultrassom Micro e Macrofocado",
-      description: "Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos."
+      description: "Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos.",
+      image: "public/images/tratamentos/Ultrassom.png",
     },
     {
       id: "botox",
       title: "Tratamento com Botox",
       description: "Revele uma pele mais brilhante e suave com nossos peelings químicos personalizados que combatem hiperpigmentação, acne, linhas finas e textura irregular.",
-      image: "https://images.pexels.com/photos/3997391/pexels-photo-3997391.jpeg?auto=compress&cs=tinysrgb&w=600"
-    },
-    {
-      id: "preenchimento",
-      title: "Preenchimento com Ácido Hialurônico",
-      description: "Trate múltiplos problemas de pele com nossas terapias avançadas a laser para pigmentação, lesões vasculares, remoção de pelos e rejuvenescimento da pele.",
-      image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/Botox.png"
     },
     {
       id: "estimulantes",
       title: "Bioestimulantes de Colágeno",
       description: "Tratamentos abrangentes para acne combinando produtos de grau médico, procedimentos e orientações de estilo de vida para uma pele limpa e saudável.",
+      image: "public/images/tratamentos/Bioestimulante-de-colageno.png"
     },
     {
       id: "fillers",
       title: "Preenchimento com ácido hialurônico",
       description: "O preenchimento com ácido hialurônico é um procedimento versátil que pode ser usado para restaurar volume, suavizar linhas e rugas, e melhorar os contornos faciais.",
-      image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/preenchimento.png"
     },
     {
       id: "biostimulants",
-      title: "Bioestimulantes Injetáveis", 
+      title: "Bioestimulantes Injetáveis",
       description: "Os bioestimulantes são substâncias que estimulam a produção natural de colágeno, melhorando a qualidade e textura da pele de forma gradual e natural.",
-      image: "https://images.pexels.com/photos/7446583/pexels-photo-7446583.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/injetaveis.png"
     },
     {
       id: "lasers",
       title: "Tratamentos a Laser",
       description: "Planos de tratamento antienvelhecimento personalizados utilizando uma combinação de cuidados preventivos, tratamentos tópicos e procedimentos não invasivos.",
-      image: "https://images.pexels.com/photos/7446603/pexels-photo-7446603.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/Laser.png"
     },
     {
       id: "fios-pdo",
       title: "Fios PDO",
       description: "Estimule a produção de colágeno e melhore a textura da pele com microagulhamento de grau médico, eficaz para cicatrizes, estrias e rejuvenescimento geral.",
-      image: "https://images.pexels.com/photos/7446622/pexels-photo-7446622.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/PDO.png"
     },
     {
       id: "esvaziadores",
       title: "Esvaziadores de Gordura",
       description: "Terapia de luz direcionada para tratar condições inflamatórias da pele como psoríase, eczema e vitiligo de maneira suave e não invasiva.",
-      image: "https://images.pexels.com/photos/3865560/pexels-photo-3865560.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/esvaziadores.png"
     },
     {
       id: "mesoterapia-capilar",
       title: "Mesoterapia Capilar",
       description: "Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.",
-      image: "https://images.pexels.com/photos/7446606/pexels-photo-7446606.jpeg?auto=compress&cs=tinysrgb&w=600"
+      image: "public/images/tratamentos/Capilar.png"
     },
     {
       id: "microagulhamento",
       title: "Microagulhamento",
       description: "Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.",
+      image: "public/images/tratamentos/Microagulhamento.png"
     }
   ];
 

@@ -34,17 +34,17 @@ const Home: React.FC = () => {
               {
                 title: "Botox",
                 description: "Reduza linhas finas e rugas com nossos tratamentos de Botox de precisão para uma aparência natural e renovada.",
-                image: "https://images.pexels.com/photos/3985363/pexels-photo-3985363.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "public/images/tratamentos/Botox.png"
               },
               {
                 title: "Preenchimento com Ácido Hialurônico",
                 description: "Restaure o volume e a firmeza da pele com nossos preenchimentos dérmicos de ácido hialurônico, proporcionando um aspecto jovem e saudável.",
-                image: "https://images.pexels.com/photos/3997989/pexels-photo-3997989.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "public/images/tratamentos/preenchimento.png"
               },
               {
                 title: "Lasers",
                 description: "Tratamentos avançados a laser para pigmentação, cicatrizes, remoção de pelos e rejuvenescimento da pele.",
-                image: "https://images.pexels.com/photos/4506109/pexels-photo-4506109.jpeg?auto=compress&cs=tinysrgb&w=600"
+                image: "public/images/tratamentos/Laser.png"
               }
             ].map((treatment, index) => (
               <motion.div
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
               Agende sua consulta hoje e dê o primeiro passo para uma pele mais saudável e bonita.
             </p>
             <Link
-              to="/booking"
+              to="/contact"
               className="inline-block py-3 px-8 bg-white text-primary-600 hover:bg-gray-100 rounded-md transition-colors font-medium text-lg"
             >
               Agendar Consulta

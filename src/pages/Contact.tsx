@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SectionTitle from '../components/ui/SectionTitle';
 import ContactMap from '../components/contact/ContactMap';
-import { Phone, Mail, MapPin, Clock, Instagram, Facebook, Twitter, Check } from 'lucide-react';
-import { supabase } from '../lib/supabaseClient';
+import { Phone, Mail, MapPin, Clock, Instagram, Check } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -27,23 +26,17 @@ const Contact: React.FC = () => {
     setError('');
 
     try {
-      // Vamos criar uma tabela simples de contatos
-      const { error } = await supabase
-        .from('contacts')
-        .insert([{
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message
-        }]);
+      const response = await fetch('https://formspree.io/f/xwpqovvn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-      if (error) {
-        // Se a tabela não existir, vamos criá-la
-        if (error.code === '42P01') {
-          console.log('Tabela contacts não existe, mas o formulário foi processado');
-        } else {
-          throw error;
-        }
+      if (!response.ok) {
+        throw new Error('Falha ao enviar a mensagem. Verifique os dados e tente novamente.');
       }
 
       setSubmitted(true);
@@ -54,9 +47,9 @@ const Contact: React.FC = () => {
         message: ''
       });
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Erro ao enviar mensagem:', error);
-      setError('Erro ao enviar mensagem. Tente novamente.');
+      setError(error.message || 'Erro ao enviar mensagem. Tente novamente.');
     } finally {
       setLoading(false);
     }
@@ -87,7 +80,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Telefone</h4>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      +55 (11) 5555-5555
+                      +55 (11) 91282-4050
                     </p>
                   </div>
                 </div>
@@ -101,7 +94,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Email</h4>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      contato@labellecutanee.com.br
+                      labellecutanee@gmail.com
                     </p>
                   </div>
                 </div>
@@ -115,9 +108,9 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Endereço</h4>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      Rua da Beleza, 123<br />
-                      Jardins, São Paulo - SP<br />
-                      01234-567
+                      Av. Prefeito Fábio Prado, 211<br></br>
+                      Jardim Vila Mariana, 4º Andar <br></br>
+                      Sala 47
                     </p>
                   </div>
                 </div>
@@ -131,9 +124,8 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Horários</h4>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      Segunda - Sexta: 9:00 AM - 7:00 PM<br />
-                      Sábado: 9:00 AM - 2:00 PM<br />
-                      Domingo: Fechado
+                      Segunda a Sexta: 8:00 - 18:00<br />
+                      Sábado e Domingo: Fechado<br />
                     </p>
                   </div>
                 </div>
@@ -149,31 +141,13 @@ const Contact: React.FC = () => {
               </p>
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/labelle_cutanee/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 text-primary-600 dark:text-secondary-400 hover:bg-primary-100 dark:hover:bg-gray-900 transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} />
-                </a>
-                <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 text-primary-600 dark:text-secondary-400 hover:bg-primary-100 dark:hover:bg-gray-900 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={20} />
-                </a>
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-white dark:bg-gray-800 text-primary-600 dark:text-secondary-400 hover:bg-primary-100 dark:hover:bg-gray-900 transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter size={20} />
                 </a>
               </div>
             </div>
