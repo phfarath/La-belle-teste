@@ -34,17 +34,17 @@ const Home: React.FC = () => {
               {
                 title: "Botox",
                 description: "Reduza linhas finas e rugas com nossos tratamentos de Botox de precisão para uma aparência natural e renovada.",
-                image: "public/images/tratamentos/Botox.png"
+                image: "/images/tratamentos/Botox.png"
               },
               {
                 title: "Preenchimento com Ácido Hialurônico",
                 description: "Restaure o volume e a firmeza da pele com nossos preenchimentos dérmicos de ácido hialurônico, proporcionando um aspecto jovem e saudável.",
-                image: "public/images/tratamentos/preenchimento.png"
+                image: "/images/tratamentos/preenchimento.png"
               },
               {
                 title: "Lasers",
                 description: "Tratamentos avançados a laser para pigmentação, cicatrizes, remoção de pelos e rejuvenescimento da pele.",
-                image: "public/images/tratamentos/Laser.png"
+                image: "/images/tratamentos/Laser.png"
               }
             ].map((treatment, index) => (
               <motion.div
