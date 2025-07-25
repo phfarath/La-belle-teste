@@ -26,7 +26,7 @@ const Contact: React.FC = () => {
     setError('');
 
     try {
-      const response = await fetch('https://formspree.io/f/xwpqovvn', {
+      const response = await fetch('https://formspree.io/f/mrblqldz', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
