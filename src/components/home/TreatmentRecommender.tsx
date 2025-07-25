@@ -14,44 +14,44 @@ interface Treatment {
 }
 
 const concernOptions: Concern[] = [
-  { id: 'acne', label: 'Acne' },
   { id: 'wrinkles', label: 'Rugas e Linhas Finas' },
-  { id: 'pigmentation', label: 'Pigmentação' },
-  { id: 'dryness', label: 'Ressecamento' },
-  { id: 'redness', label: 'Vermelhidão e Sensibilidade' },
-  { id: 'sagging', label: 'Pele Flácida' },
+  { id: 'sagging', label: 'Flacidez e Perda de Volume' },
+  { id: 'collagen', label: 'Estímulo de Colágeno' },
+  { id: 'texture', label: 'Textura e Qualidade da Pele' },
+  { id: 'fat', label: 'Gordura Localizada' },
+  { id: 'hair-loss', label: 'Queda de Cabelo' },
 ];
 
 const treatmentMapping: Record<string, Treatment> = {
-  'acne': {
-    title: 'Protocolo Avançado de Tratamento de Acne',
-    description: 'Nosso protocolo especializado em acne combina peelings químicos, terapia LED e tratamentos tópicos personalizados para eliminar as espinhas e prevenir futuras erupções.',
-    imageUrl: 'https://images.pexels.com/photos/7446983/pexels-photo-7446983.jpeg?auto=compress&cs=tinysrgb&w=600'
-  },
   'wrinkles': {
-    title: 'Rejuvenescimento Anti-Idade',
-    description: 'Combata os sinais de envelhecimento com nossa abordagem abrangente usando Botox, preenchimentos dérmicos e tratamentos estimulantes de colágeno para uma pele visivelmente mais lisa.',
-    imageUrl: 'https://images.pexels.com/photos/8128081/pexels-photo-8128081.jpeg?auto=compress&cs=tinysrgb&w=600'
-  },
-  'pigmentation': {
-    title: 'Correção de Pigmentação',
-    description: 'Nossos tratamentos avançados com laser e peelings químicos reduzem efetivamente a hiperpigmentação, melasma e danos causados pelo sol para uma pele mais uniforme.',
-    imageUrl: 'https://images.pexels.com/photos/7990205/pexels-photo-7990205.jpeg?auto=compress&cs=tinysrgb&w=600'
-  },
-  'dryness': {
-    title: 'Terapia de Hidratação',
-    description: 'Restaure a hidratação e fortaleça sua barreira cutânea com nossos tratamentos hidratantes, incluindo infusões de ácido hialurônico e máscaras especializadas.',
-    imageUrl: 'https://images.pexels.com/photos/7446025/pexels-photo-7446025.jpeg?auto=compress&cs=tinysrgb&w=600'
-  },
-  'redness': {
-    title: 'Programa Calmante para Pele Sensível',
-    description: 'Reduza a inflamação e fortaleça sua pele com nossos protocolos suaves, projetados especificamente para tipos de pele reativa e sensível.',
-    imageUrl: 'https://images.pexels.com/photos/4046567/pexels-photo-4046567.jpeg?auto=compress&cs=tinysrgb&w=600'
+    title: 'Tratamento com Botox',
+    description: 'Reduza linhas finas e rugas com nossos tratamentos precisos de Botox, administrados por dermatologistas certificados para uma aparência natural e renovada.',
+    imageUrl: '/images/tratamentos/Botox.png'
   },
   'sagging': {
-    title: 'Aperto e Lifting da Pele',
-    description: 'Restaure a firmeza e elasticidade com nossos tratamentos de lifting não cirúrgicos usando radiofrequência, tecnologia de ultrassom e indução de colágeno.',
-    imageUrl: 'https://images.pexels.com/photos/6476088/pexels-photo-6476088.jpeg?auto=compress&cs=tinysrgb&w=600'
+    title: 'Ultrassom Micro e Macrofocado',
+    description: 'Restaure o volume e melhore os contornos faciais com preenchedores premium de ácido hialurônico, adaptados à sua estrutura facial única e objetivos estéticos.',
+    imageUrl: '/images/tratamentos/Ultrassom.png'
+  },
+  'collagen': {
+    title: 'Bioestimulantes Injetáveis',
+    description: 'Os bioestimulantes são substâncias que estimulam a produção natural de colágeno, melhorando a qualidade e textura da pele de forma gradual e natural.',
+    imageUrl: '/images/tratamentos/injetaveis.png'
+  },
+  'texture': {
+    title: 'Microagulhamento',
+    description: 'Estimule a produção de colágeno e melhore a textura da pele com microagulhamento de grau médico, eficaz para cicatrizes, estrias e rejuvenescimento geral.',
+    imageUrl: '/images/tratamentos/Microagulhamento.png'
+  },
+  'fat': {
+    title: 'Esvaziadores de Gordura',
+    description: 'Terapia de luz direcionada para tratar condições inflamatórias da pele como psoríase, eczema e vitiligo de maneira suave e não invasiva.',
+    imageUrl: '/images/tratamentos/esvaziadores.png'
+  },
+  'hair-loss': {
+    title: 'Mesoterapia Capilar',
+    description: 'Tratamento eficaz para vasinhos e pequenas varizes usando soluções injetáveis para colapsar e desvanecer veias visíveis.',
+    imageUrl: '/images/tratamentos/Capilar.png'
   },
 };
 
