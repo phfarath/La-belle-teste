@@ -6,73 +6,73 @@ const Gallery: React.FC = () => {
   const clinicImages = [
     {
       id: 1,
-      src: "public/images/ambiente/Ambiente (22).jpg",
-      alt: "La Belle Cutanée recepção Area",
+      src: "/images/ambiente/Ambiente (1).jpg",
+      alt: "Reception Area",
       category: "recepção"
     },
     {
       id: 2,
-      src: "public/images/ambiente/Ambiente (30).jpg",
-      alt: "Modern treatment Room",
+      src: "/images/ambiente/Ambiente (2).jpg",
+      alt: "Treatment Room",
       category: "salas"
     },
     {
       id: 3,
-      src: "public/images/ambiente/Ambiente (31).jpg",
-      alt: "consultas Office",
-      category: "salas"
+      src: "/images/ambiente/Ambiente (3).jpg",
+      alt: "Modern Equipment",
+      category: "consultas"
     },
     {
       id: 4,
-      src: "public/images/ambiente/Ambiente (45).jpg",
-      alt: "Premium Skincare Products Display",
-      category: "salas"
+      src: "/images/ambiente/Ambiente (4).jpg",
+      alt: "Comfortable Seating",
+      category: "recepção"
     },
     {
       id: 5,
-      src: "public/images/ambiente/foto-consultorio.jpg",
+      src: "/images/ambiente/foto-consultorio.jpg",
       alt: "Waiting Lounge",
       category: "recepção"
     },
     {
       id: 6,
-      src: "public/images/ambiente/Lasers.jpg",
+      src: "/images/ambiente/Lasers.jpg",
       alt: "Laser salas Room",
       category: "consultas"
     },
     {
       id: 7,
-      src: "public/images/ambiente/Mesoterapia-Capilar.jpg",
+      src: "/images/ambiente/Mesoterapia-Capilar.jpg",
       alt: "Clinic Building Exterior",
       category: "consultas"
     },
     {
       id: 8,
-      src: "public/images/ambiente/Ambiente (18).jpg",
+      src: "/images/ambiente/Ambiente (18).jpg",
       alt: "Relaxation Area",
       category: "recepção"
     },
     {
       id: 9,
-      src: "public/images/ambiente/Ambiente (52).jpg",
+      src: "/images/ambiente/Ambiente (52).jpg",
       alt: "Facial salas Room",
       category: "salas"
     },
     {
       id: 10,
-      src: "public/images/ambiente/Esvasiadores.jpg",
+      src: "/images/ambiente/Esvasiadores.jpg",
       alt: "Product Testing Area",
       category: "consultas"
     },
     {
       id: 11,
-      src: "public/images/ambiente/pequenas-cirurgias.jpg",
+      src: "/images/ambiente/pequenas-cirurgias.jpg",
       alt: "Modern Vanity Area",
       category: "consultas"
     },
     {
       id: 12,
-      src: "public/images/ambiente/Ambiente (8).jpg",
+      src: "/images/ambiente/Ambiente (8).jpg",
       alt: "Advanced Equipment",
       category: "recepção"
     }
