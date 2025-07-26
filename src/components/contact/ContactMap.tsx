@@ -4,7 +4,7 @@ const ContactMap: React.FC = () => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0976131458715!2d-46.6549894!3d-23.5646162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%20Brazil!5e0!3m2!1spt-BR!2sbr!4v1655400744105!5m2!1spt-BR!2sbr"
+        src="https://www.google.com/maps/place/La+Belle+Cutanee/@-23.590952,-46.6310473,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce5b0009055d5b:0x7c7b39bdf68dff18!8m2!3d-23.5909569!4d-46.6284724!16s%2Fg%2F11y2n5smhw?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D"
         width="100%"
         height="450"
         style={{ border: 0 }}
