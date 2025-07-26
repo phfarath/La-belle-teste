@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-gray-900 dark:text-white">Email</h4>
                     <p className="mt-1 text-gray-600 dark:text-gray-300">
-                      labellecutanee@gmail.com
+                      roberta_pontes@labellecutanee.com.br
                     </p>
                   </div>
                 </div>
