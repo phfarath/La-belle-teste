@@ -5,9 +5,9 @@ const Logo: React.FC = () => {
   const { theme } = useTheme();
   
   // Define qual logo usar com base no tema
-  const logoSrc = theme === 'light' 
-    ? "/images/Ativo 14.png"  // Logo para o tema claro
-    : "/images/01 (1).png";   // Logo para o tema escuro
+  const logoSrc = theme === 'light'
+    ? "/images/ativo-14.png"  // Logo para o tema claro
+    : "/images/01-1.png";   // Logo para o tema escuro
 
   return (
     <div className="flex items-center">
