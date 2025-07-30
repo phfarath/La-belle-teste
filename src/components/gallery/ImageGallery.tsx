@@ -17,13 +17,13 @@ interface ImageGalleryProps {
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, subtitle }) => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
-  const [filter, setFilter] = useState<string>('all');
+  const [filter, setFilter] = useState<string>('todas');
 
-  const filteredImages = filter === 'all' 
-    ? images 
+  const filteredImages = filter === 'todas'
+    ? images
     : images.filter(image => image.category === filter);
 
-  const categories = ['all', ...new Set(images.map(image => image.category))];
+  const categories = ['todas', ...new Set(images.map(image => image.category))];
 
   return (
     <section className="py-16">
@@ -53,7 +53,9 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images, title, subtitle }) 
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {category === 'todas'
+                  ? 'Todas as fotos'
+                  : category.charAt(0).toUpperCase() + category.slice(1)}
               </button>
             ))}
           </div>

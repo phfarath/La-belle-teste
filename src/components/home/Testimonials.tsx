@@ -13,24 +13,45 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Rodrigo Farath",
-    role: "Paciente desde 2015",
-    quote: "Minha experiência na La Belle Cutanée foi excepcional. A equipe é incrivelmente atenciosa, e o Dra. Roberta Pontes transformou minha pele. Depois de anos lutando contra a acne, finalmente tenho uma pele limpa e saudável graças ao plano de tratamento deles.",
-    image: "https://lh3.googleusercontent.com/a-/ALV-UjXECJ3zJ4gqIK7t0xglkpB1JXu6KMfpGPmrSWupAQkpxGPrsmVZ=w72-h72-p-rp-mo-ba4-br100"
-  },
-  {
-    id: 2,
     name: "Vanessa Vilaça",
     role: "Paciente desde 2015",
     quote: "Com a Dra. Roberta, a beleza é tratada com cuidado e confiança! Cada detalhe, é pensado, tanto na questão de cuidado com a pele, quanto na questao estética, sem abusos e/ou exageros, sempre o bom senso do natural e bonita e principalmente sem riscos. Dermatologia de excelência, onde cada detalhe e tratamento é pensado para realçar o melhor de você. Amo cada visita em sua clínica.",
     image: "https://lh3.googleusercontent.com/a-/ALV-UjXjYl9zMMMiZfmTFAY1HYGSRdAAIJ1p1LhWSBzzOltWAMFW3y9w=w72-h72-p-rp-mo-ba2-br100"
   },
   {
-    id: 3,
+    id: 2,
     name: "Adriana Akemi Kuniy",
     role: "Paciente desde 2023",
     quote: "Clínica bem localizada e atendimento incrível! A dra Roberta Farah é uma excelente profissional. Dermatologista super competente. Ela recomenda o ideal para o paciente, não fica empurrando procedimentos. Super coerente com o biotipo da pessoa. Super recomendo !!!",
     image: "https://lh3.googleusercontent.com/a-/ALV-UjUm6MZd0ihQpCRerhZnd2BbPyvdbWggEjH1ctaeVVXGoD4mdNUhFQ=w72-h72-p-rp-mo-ba3-br100"
+  },
+  {
+    id: 3,
+    name: "Marina Kuniy",
+    role: "Paciente desde 2023",
+    quote: "Clínica maravilhosa! Atendimento é perfeito, a doutora Roberta Pontes também é incrível! Uma dermatologista super competente e simpática. Recomendo demais!",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXWHkUjhbgbDQmdHqlnhX4B411bHeXUu0B4zIB7eRjJJ60WNldhpQ=w99-h99-p-rp-mo-br100"
+  },
+  {
+    id: 4,
+    name: "Crys Matos",
+    role: "Paciente desde 2020",
+    quote: "Ótimo atendimento, Dra Roberta é muito atenciosa e se preocupa muito com o bem estar do paciente. Minha dermato da vida. A clínica é linda!",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocKpdUINQTI1OxdplULhbpMNYb26l9KlQKaPXVmtJTGtPjiPSg=w99-h99-p-rp-mo-br100"
+  },
+  {
+    id: 5,
+    name: "Elizandra Pessoa",
+    role: "Paciente desde 2020",
+    quote: "Dra. Roberta ja cuida de mim ha mais de 5 amos, é uma dermato maravilhosa! Recomendo 😉",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjXieV2vKFu-qsSLQ6eXW4TXUkJMRdlxa185AVAFOCFYCVpKFFs=w99-h99-p-rp-mo-br100"
+  },
+  {
+    id: 6,
+    name: "Monica Hui",
+    role: "Paciente desde 2021",
+    quote: "Profissional maravilhosa… a Dra Roberta foi cuidadosa, detalhista e fez um procedimento que eu amei!! Super recomendo!!",
+    image: "https://lh3.googleusercontent.com/a/ACg8ocLQs2qkgfglePMKURTlFPEJ0QB5DAniC9Megq8S2umSDmbp5A=w99-h99-p-rp-mo-br100"
   }
 ];
 
