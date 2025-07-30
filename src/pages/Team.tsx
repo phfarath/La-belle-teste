@@ -9,7 +9,7 @@ const Team: React.FC = () => {
       specialty: "Dermatologia Clínica",
       credentials: "CRM 123456 / RQE 78910",
       bio: "Dra. Roberta Pontes possui mais de 15 anos de experiência em dermatologia clínica, especializada em tratamento de acne e prevenção de câncer de pele. Concluiu sua residência no Hospital das Clínicas e é membro da Sociedade Brasileira de Dermatologia.",
-      image: "/images/Roberta (28) (1).jpg"
+      image: "/images/roberta-28-1.jpg"
     }
   ];
 

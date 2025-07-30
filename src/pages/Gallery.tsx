@@ -6,25 +6,25 @@ const Gallery: React.FC = () => {
   const clinicImages = [
     {
       id: 1,
-      src: "/images/ambiente/Ambiente (1).jpg",
+      src: "/images/ambiente/ambiente-22.jpg",
       alt: "Reception Area",
       category: "recepção"
     },
     {
       id: 2,
-      src: "/images/ambiente/Ambiente (2).jpg",
+      src: "/images/ambiente/ambiente-30.jpg",
       alt: "Treatment Room",
       category: "salas"
     },
     {
       id: 3,
-      src: "/images/ambiente/Ambiente (3).jpg",
+      src: "/images/ambiente/ambiente-31.jpg",
       alt: "Modern Equipment",
       category: "consultas"
     },
     {
       id: 4,
-      src: "/images/ambiente/Ambiente (4).jpg",
+      src: "/images/ambiente/ambiente-45.jpg",
       alt: "Comfortable Seating",
       category: "recepção"
     },
@@ -48,13 +48,13 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      src: "/images/ambiente/Ambiente (18).jpg",
+      src: "/images/ambiente/ambiente-18.jpg",
       alt: "Relaxation Area",
       category: "recepção"
     },
     {
       id: 9,
-      src: "/images/ambiente/Ambiente (52).jpg",
+      src: "/images/ambiente/ambiente-52.jpg",
       alt: "Facial salas Room",
       category: "salas"
     },
@@ -72,7 +72,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 12,
-      src: "/images/ambiente/Ambiente (8).jpg",
+      src: "/images/ambiente/ambiente-8.jpg",
       alt: "Advanced Equipment",
       category: "recepção"
     }
