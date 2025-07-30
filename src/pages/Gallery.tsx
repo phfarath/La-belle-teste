@@ -48,13 +48,13 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      src: "/images/ambiente/Ambiente (18).jpg",
+      src: "/images/ambiente/ambiente-18.jpg",
       alt: "Relaxation Area",
       category: "recepção"
     },
     {
       id: 9,
-      src: "/images/ambiente/Ambiente (52).jpg",
+      src: "/images/ambiente/ambiente-52.jpg",
       alt: "Facial salas Room",
       category: "salas"
     },
@@ -72,7 +72,7 @@ const Gallery: React.FC = () => {
     },
     {
       id: 12,
-      src: "/images/ambiente/Ambiente (8).jpg",
+      src: "/images/ambiente/ambiente-8.jpg",
       alt: "Advanced Equipment",
       category: "recepção"
     }
