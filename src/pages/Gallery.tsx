@@ -6,25 +6,25 @@ const Gallery: React.FC = () => {
   const clinicImages = [
     {
       id: 1,
-      src: "/images/ambiente/Ambiente (1).jpg",
+      src: "/images/ambiente/ambiente-22.jpg",
       alt: "Reception Area",
       category: "recepção"
     },
     {
       id: 2,
-      src: "/images/ambiente/Ambiente (2).jpg",
+      src: "/images/ambiente/ambiente-30.jpg",
       alt: "Treatment Room",
       category: "salas"
     },
     {
       id: 3,
-      src: "/images/ambiente/Ambiente (3).jpg",
+      src: "/images/ambiente/ambiente-31.jpg",
       alt: "Modern Equipment",
       category: "consultas"
     },
     {
       id: 4,
-      src: "/images/ambiente/Ambiente (4).jpg",
+      src: "/images/ambiente/ambiente-45.jpg",
       alt: "Comfortable Seating",
       category: "recepção"
     },
