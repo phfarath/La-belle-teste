@@ -6,75 +6,69 @@ const Gallery: React.FC = () => {
   const clinicImages = [
     {
       id: 1,
-      src: "/images/ambiente/Ambiente (1).jpg",
-      alt: "Reception Area",
+      src: "/images/ambiente/Ambiente (22).jpg",
+      alt: "Recepção",
       category: "recepção"
     },
     {
       id: 2,
-      src: "/images/ambiente/Ambiente (2).jpg",
-      alt: "Treatment Room",
+      src: "/images/ambiente/Ambiente (30).jpg",
+      alt: "Sala de Tratamentos",
       category: "salas"
     },
     {
       id: 3,
-      src: "/images/ambiente/Ambiente (3).jpg",
-      alt: "Modern Equipment",
-      category: "consultas"
+      src: "/images/ambiente/Ambiente (31).jpg",
+      alt: "Equipamento Moderno",
+      category: "salas"
     },
     {
       id: 4,
-      src: "/images/ambiente/Ambiente (4).jpg",
-      alt: "Comfortable Seating",
+      src: "/images/ambiente/Ambiente (8).jpg",
+      alt: "Sala de Espera",
       category: "recepção"
     },
     {
       id: 5,
       src: "/images/ambiente/foto-consultorio.jpg",
-      alt: "Waiting Lounge",
+      alt: "Entrada da Clínica",
       category: "recepção"
     },
     {
       id: 6,
       src: "/images/ambiente/Lasers.jpg",
-      alt: "Laser salas Room",
+      alt: "Consulta de Laser",
       category: "consultas"
     },
     {
       id: 7,
       src: "/images/ambiente/Mesoterapia-Capilar.jpg",
-      alt: "Clinic Building Exterior",
+      alt: "Mesoterapia Capilar",
       category: "consultas"
     },
     {
       id: 8,
       src: "/images/ambiente/Ambiente (18).jpg",
-      alt: "Relaxation Area",
+      alt: "Logo La Belle na recepção",
       category: "recepção"
     },
     {
       id: 9,
       src: "/images/ambiente/Ambiente (52).jpg",
-      alt: "Facial salas Room",
+      alt: "Sala de Consultas",
       category: "salas"
     },
     {
       id: 10,
       src: "/images/ambiente/Esvasiadores.jpg",
-      alt: "Product Testing Area",
+      alt: "Consulta de Esvaziadores",
       category: "consultas"
     },
     {
       id: 11,
       src: "/images/ambiente/pequenas-cirurgias.jpg",
-      alt: "Modern Vanity Area",
+      alt: "Pequenas Cirurgias",
       category: "consultas"
-    },
-    {
-      id: 12,
-      src: "/images/ambiente/Ambiente (8).jpg",
-      alt: "Advanced Equipment",
-      category: "recepção"
     }
   ];
 
