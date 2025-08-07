@@ -6,25 +6,25 @@ const Gallery: React.FC = () => {
   const clinicImages = [
     {
       id: 1,
-      src: "/images/ambiente/Ambiente (22).jpg",
+      src: "/images/ambiente/ambiente-22.jpg",
       alt: "Recepção",
       category: "recepção"
     },
     {
       id: 2,
-      src: "/images/ambiente/Ambiente (30).jpg",
+      src: "/images/ambiente/ambiente-30.jpg",
       alt: "Sala de Tratamentos",
       category: "salas"
     },
     {
       id: 3,
-      src: "/images/ambiente/Ambiente (31).jpg",
+      src: "/images/ambiente/ambiente-31.jpg",
       alt: "Equipamento Moderno",
       category: "salas"
     },
     {
       id: 4,
-      src: "/images/ambiente/Ambiente (8).jpg",
+      src: "/images/ambiente/ambiente-8.jpg",
       alt: "Sala de Espera",
       category: "recepção"
     },
@@ -48,13 +48,13 @@ const Gallery: React.FC = () => {
     },
     {
       id: 8,
-      src: "/images/ambiente/Ambiente (18).jpg",
+      src: "/images/ambiente/ambiente-18.jpg",
       alt: "Logo La Belle na recepção",
       category: "recepção"
     },
     {
       id: 9,
-      src: "/images/ambiente/Ambiente (52).jpg",
+      src: "/images/ambiente/ambiente-52.jpg",
       alt: "Sala de Consultas",
       category: "salas"
     },
