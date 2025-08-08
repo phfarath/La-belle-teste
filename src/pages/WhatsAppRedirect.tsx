@@ -5,16 +5,16 @@ export default function WhatsAppRedirect() {
     // dispara conversão
     if ((window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
-        send_to: 'AW-17449048396/XXXXXXXXXXX', // <- substitua pelo seu
+        send_to: 'AW-17449048396',
       });
     }
     // redireciona após um pequeno delay para garantir o envio
-    const t = setTimeout(() => {
-      window.location.replace(
-        "https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta."
+    setTimeout(() => {
+      window.open(
+        "https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.",
+        "_blank"
       );
-    }, 150);
-    return () => clearTimeout(t);
+    }, 300); 
   }, []);
 
   return <p>Redirecionando para o WhatsApp...</p>;
