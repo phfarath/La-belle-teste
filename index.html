@@ -1,26 +1,40 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17449048396"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-17449048396');
-    </script>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined') {
+          window.open(url, '_blank', 'noopener,noreferrer');
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17449048396/qmP-CODwxoIbEMyyrYBB',
+        'event_callback': callback
+      });
+      // fallback caso o callback não rode
+      setTimeout(callback, 300);
+      return false;
+    }
+  </script>
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/images/01-6.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <title>La Belle Cutanee | Dermatologia Avançada e Cuidado Estético</title>
-    <meta name="description" content="A La Belle Cutanée oferece dermatologia avançada e cuidados estéticos com foco em tratamentos personalizados. Localizada em São Paulo, nossa clínica une tecnologia de ponta a um atendimento humanizado.">
-  </head>
-  <body class="font-poppins">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/images/01-6.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <title>La Belle Cutanee | Dermatologia Avançada e Cuidado Estético</title>
+  <meta name="description"
+    content="A La Belle Cutanée oferece dermatologia avançada e cuidados estéticos com foco em tratamentos personalizados. Localizada em São Paulo, nossa clínica une tecnologia de ponta a um atendimento humanizado.">
+</head>
+
+<body class="font-poppins">
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>

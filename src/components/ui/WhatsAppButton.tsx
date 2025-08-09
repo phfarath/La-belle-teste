@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const WA_URL =
+  "https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.";
+
 const WhatsAppButton: React.FC = () => {
   return (
     <motion.div
@@ -12,9 +15,19 @@ const WhatsAppButton: React.FC = () => {
       transition={{ duration: 0.3, delay: 0.5 }}
     >
       <a
-        href="/whatsapp"
+        href={WA_URL}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
         aria-label="Agende via WhatsApp"
+        onClick={(e) => {
+          e.preventDefault();
+          if (typeof (window as any).gtag_report_conversion === 'function') {
+            (window as any).gtag_report_conversion(WA_URL);
+          } else {
+            window.open(WA_URL, '_blank', 'noopener,noreferrer');
+          }
+        }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
