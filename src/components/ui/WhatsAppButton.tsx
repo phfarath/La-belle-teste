@@ -12,19 +12,9 @@ const WhatsAppButton: React.FC = () => {
       transition={{ duration: 0.3, delay: 0.5 }}
     >
       <a
-        href="https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta."
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/whatsapp"
         className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
         aria-label="Agende via WhatsApp"
-        onClick={(e) => {
-          e.preventDefault(); // impede ir direto para o WhatsApp
-          if ((window as any).gtag_report_conversion) {
-            (window as any).gtag_report_conversion("https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.");
-          } else {
-            window.open("https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.", '_blank', 'noopener,noreferrer');
-          }
-        }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
