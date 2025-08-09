@@ -3,19 +3,13 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-  <script>
-    function gtag_report_conversion(url) {
-      var cb = function () {
-        if (url) window.open(url, '_blank', 'noopener,noreferrer');
-      };
-      gtag('event', 'conversion', {
-        send_to: 'AW-17449048396/qmP-CODwxoIbEMyyrYBB',
-        event_callback: cb
-      });
-      setTimeout(cb, 300);
-      return false;
-    }
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17449048396"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17449048396');
+    </script>
 
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="/images/01-6.png" />
