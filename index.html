@@ -1,20 +1,18 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <!-- Google tag (gtag.js) -->
   <script>
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof url !== 'undefined') {
-          window.open(url, '_blank', 'noopener,noreferrer');
-        }
+      var cb = function () {
+        if (url) window.open(url, '_blank', 'noopener,noreferrer');
       };
       gtag('event', 'conversion', {
-        'send_to': 'AW-17449048396/qmP-CODwxoIbEMyyrYBB',
-        'event_callback': callback
+        send_to: 'AW-17449048396/qmP-CODwxoIbEMyyrYBB',
+        event_callback: cb
       });
-      // fallback caso o callback não rode
-      setTimeout(callback, 300);
+      setTimeout(cb, 300);
       return false;
     }
   </script>

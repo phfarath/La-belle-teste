@@ -17,14 +17,12 @@ const WhatsAppButton: React.FC = () => {
         rel="noopener noreferrer"
         className="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
         aria-label="Agende via WhatsApp"
-        onClick={() => {
-          // abre imediatamente (evento de usuário, sem bloqueio)
-          window.open("https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.", '_blank', 'noopener,noreferrer');
-          // dispara a conversão sem depender do callback
-          if (typeof (window as any).gtag === 'function') {
-            (window as any).gtag('event', 'conversion', {
-              send_to: 'AW-17449048396/qmP-CODwxoIbEMyyrYBB'
-            });
+        onClick={(e) => {
+          e.preventDefault(); // impede ir direto para o WhatsApp
+          if ((window as any).gtag_report_conversion) {
+            (window as any).gtag_report_conversion("https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.");
+          } else {
+            window.open("https://wa.me/5511912824050?text=Olá%2C+gostaria+de+agendar+uma+consulta.", '_blank', 'noopener,noreferrer');
           }
         }}
       >
