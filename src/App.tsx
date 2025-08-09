@@ -11,7 +11,6 @@ import Contact from './pages/Contact';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
-import WhatsAppRedirect from './pages/WhatsAppRedirect';
 // import Login from './pages/Login';
 // import Signup from './pages/Signup';
 // import Profile from './pages/Profile';
@@ -41,7 +40,6 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/booking" element={<Booking />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/whatsapp" element={<WhatsAppRedirect />} />
               {/* <Route path="/blog" element={<Blog />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
