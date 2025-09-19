@@ -28,6 +28,7 @@ const Header: React.FC<HeaderProps> = ({ scrolled }) => {
     { to: '/treatments', label: 'Tratamentos' },
     { to: '/team', label: 'Nossa Equipe' },
     { to: '/gallery', label: 'Galeria da Clínica' },
+    { to: '/lia', label: 'Lista de Espera para a Lia' },
     // { to: '/blog', label: 'Blog' },
     // { to: '/booking', label: 'Agendar Consulta' },
     { to: '/contact', label: 'Contato' },

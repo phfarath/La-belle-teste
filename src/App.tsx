@@ -9,16 +9,17 @@ import Booking from './pages/Booking';
 import Contact from './pages/Contact';
 // import Blog from './pages/Blog';
 import WhatsAppButton from './components/ui/WhatsAppButton';
+import PromoAlert from './components/ui/PromoAlert';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { AuthProvider } from './contexts/AuthContext';
 import WhatsAppRedirect from './pages/WhatsAppRedirect';
+import Lia from './pages/Lia';
 // import Login from './pages/Login';
 // import Signup from './pages/Signup';
 // import Profile from './pages/Profile';
-// import PromoAlert from './components/ui/PromoAlert';
 
 function App() {
-  const [_showPromo, setShowPromo] = useState(false);
+  const [showPromo, setShowPromo] = useState(false);
 
   useEffect(() => {
     // Show promo after 3 seconds
@@ -29,11 +30,21 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleClosePromo = () => {
+    setShowPromo(false);
+  };
+
   return (
     <ThemeProvider>
       <AuthProvider>
         <Router>
           <Layout>
+            {showPromo && (
+              <PromoAlert
+                message="Conheça a Lia - Sua doutora virtual com IA! Clique aqui para saber mais."
+                onClose={handleClosePromo}
+              />
+            )}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/team" element={<Team />} />
@@ -42,6 +53,7 @@ function App() {
               <Route path="/booking" element={<Booking />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/whatsapp" element={<WhatsAppRedirect />} />
+              <Route path="/lia" element={<Lia />} />
               {/* <Route path="/blog" element={<Blog />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
